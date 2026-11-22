@@ -2,8 +2,6 @@
 
 Free study materials for **DP-700: Implementing Data Engineering Solutions Using Microsoft Fabric** (Microsoft Certified: Fabric Data Engineer Associate).
 
-I'm Ankur Jain, a senior data engineer. I failed DP-700 the first time with 619 (the pass mark is 700). I rebuilt my preparation from scratch, and on **Nov 17, 2026 I passed with 745**. These are the materials I studied from, cleaned up so anyone can use them. The full story is in [journey.md](journey.md).
-
 ## What's inside
 
 | File | What it is |
