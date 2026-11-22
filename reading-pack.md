@@ -2,9 +2,9 @@
 
 # Domain 1 — Implement and manage an analytics solution (30–35%)
 
-This domain covers Part 2 (workspace settings), Part 7 (orchestration), Part 8 (security and governance) and Part 9 (lifecycle management).
+This domain covers Part 1 (workspace settings), Part 2 (orchestration), Part 3 (security and governance) and Part 4 (lifecycle management).
 
-## Part 2 — Configure workspace settings
+## Part 1 — Configure workspace settings
 
 Four workspace setting areas are tested: Spark, domains, OneLake and Apache Airflow. Changing Spark settings needs the workspace **Admin** role.
 
@@ -73,7 +73,7 @@ Each extra node adds capacity for 3 more workers. Private networks and VNets are
 
 Sources: [Workspace admin settings](https://learn.microsoft.com/en-us/fabric/data-engineering/workspace-admin-settings) · [Spark compute](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-compute) · [High concurrency](https://learn.microsoft.com/en-us/fabric/data-engineering/high-concurrency-overview) · [Domains](https://learn.microsoft.com/en-us/fabric/governance/domains) · [OneLake shortcuts (caching)](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts) · [OneLake diagnostics](https://learn.microsoft.com/en-us/fabric/onelake/onelake-diagnostics-overview) · [Airflow workspace settings](https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-workspace-settings)
 
-## Part 7 — Orchestrate processes
+## Part 2 — Orchestrate processes
 
 Pipelines orchestrate: they schedule, trigger, branch, loop and call notebooks, dataflows, Copy jobs and SQL. Notebooks and Dataflow Gen2 do the transformation work inside them.
 
@@ -144,7 +144,7 @@ notebookutils.notebook.runMultiple(DAG)
 
 Sources: [Decision guide](https://learn.microsoft.com/en-us/fabric/fundamentals/decision-guide-pipeline-dataflow-spark) · [Run, schedule or trigger a pipeline](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs) · [NotebookUtils run and runMultiple](https://learn.microsoft.com/en-us/fabric/data-engineering/notebookutils/notebookutils-notebook-run) · [Expressions and functions](https://learn.microsoft.com/en-us/fabric/data-factory/expression-language) · [Fail activity](https://learn.microsoft.com/en-us/fabric/data-factory/fail-activity) · [Notebook workflows in pipelines (Fabric blog)](https://blog.fabric.microsoft.com/blog/use-fabric-data-factory-data-pipelines-to-orchestrate-notebook-based-workflows) · [Airflow job concepts](https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-concepts)
 
-## Part 8 — Security and governance
+## Part 3 — Security and governance
 
 Security is layered. The workspace role gives access to every item in a workspace. An item permission gives access to one item. T-SQL controls and OneLake security narrow what someone can see inside an item. For least privilege on a single item, share that item instead of granting a workspace role.
 
@@ -268,7 +268,7 @@ An item carries one endorsement badge. Certification and master data must be ena
 
 Sources: [Workspace roles](https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces) · [Share items](https://learn.microsoft.com/en-us/fabric/fundamentals/share-items) · [Warehouse security](https://learn.microsoft.com/en-us/fabric/data-warehouse/security) · [Row-level security](https://learn.microsoft.com/en-us/fabric/data-warehouse/row-level-security) · [Column-level security](https://learn.microsoft.com/en-us/fabric/data-warehouse/column-level-security) · [Dynamic data masking](https://learn.microsoft.com/en-us/fabric/data-warehouse/dynamic-data-masking) · [OneLake security](https://learn.microsoft.com/en-us/fabric/onelake/security/get-started-onelake-security) · [OneLake security for SQL analytics endpoints](https://learn.microsoft.com/en-us/fabric/onelake/sql-analytics-endpoint-onelake-security) · [Information protection](https://learn.microsoft.com/en-us/fabric/governance/information-protection) · [Downstream inheritance](https://learn.microsoft.com/en-us/fabric/governance/service-security-sensitivity-label-downstream-inheritance) · [Endorsement](https://learn.microsoft.com/en-us/fabric/governance/endorsement-overview) · [Track user activities](https://learn.microsoft.com/en-us/fabric/admin/track-user-activities) · [SQL audit logs](https://learn.microsoft.com/en-us/fabric/data-warehouse/configure-sql-audit-logs)
 
-## Part 9 — Lifecycle management
+## Part 4 — Lifecycle management
 
 Git integration versions item definitions per workspace, database projects version warehouse schema as code, and deployment pipelines promote content between stage workspaces. None of the three copies data.
 
@@ -322,9 +322,9 @@ Sources: [Git integration overview](https://learn.microsoft.com/en-us/fabric/cic
 
 # Domain 2 — Ingest and transform data (30–35%)
 
-This domain covers Part 1 (foundations and choosing a data store), Part 3 (batch ingestion), Part 4 (loading patterns), Part 5 (batch transformation) and Part 6 (streaming and Real-Time Intelligence).
+This domain covers Part 5 (foundations and choosing a data store), Part 6 (batch ingestion), Part 7 (loading patterns), Part 8 (batch transformation) and Part 9 (streaming and Real-Time Intelligence).
 
-## Part 1 — Foundations: OneLake and choosing a data store
+## Part 5 — Foundations: OneLake and choosing a data store
 
 Every Fabric data store writes to one OneLake per tenant in open Delta (or Iceberg) format, so the store choice is about who works on the data and how, not where it lives.
 
@@ -360,7 +360,7 @@ Exam cue: "the team writes T-SQL including INSERT/UPDATE/DELETE" → Warehouse. 
 
 Sources: [OneLake overview](https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview) · [Choose a data store](https://learn.microsoft.com/en-us/fabric/fundamentals/decision-guide-data-store) · [SQL analytics endpoint](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-sql-analytics-endpoint)
 
-## Part 3 — Batch ingestion
+## Part 6 — Batch ingestion
 
 Pick the ingestion tool by whether you need to copy the data at all, how much transformation happens on the way in, and who builds it.
 
@@ -478,9 +478,9 @@ SELECT * FROM MyLakehouse.dbo.sales;
 
 Sources: [Decision guide: copy, Copy job, dataflow, Eventstream, Spark](https://learn.microsoft.com/en-us/fabric/fundamentals/decision-guide-pipeline-dataflow-spark) · [OneLake shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts) · [Mirroring](https://learn.microsoft.com/en-us/fabric/mirroring/overview) · [Copy job](https://learn.microsoft.com/en-us/fabric/data-factory/what-is-copy-job) · [Dataflow Gen2 destinations](https://learn.microsoft.com/en-us/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings) · [Ingest data into the Warehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/ingest-data)
 
-## Part 4 — Loading patterns
+## Part 7 — Loading patterns
 
-Load dimensions before facts, load facts incrementally whenever the source lets you detect new rows, and never truncate and reload a dimension that has generated surrogate keys. The streaming loading pattern is covered in Part 6.
+Load dimensions before facts, load facts incrementally whenever the source lets you detect new rows, and never truncate and reload a dimension that has generated surrogate keys. The streaming loading pattern is covered in Part 9.
 
 ### Full vs incremental loads
 
@@ -523,7 +523,7 @@ Fact loads look up the surrogate key of the **current** version of an SCD 2 memb
 
 Sources: [Load tables in a dimensional model](https://learn.microsoft.com/en-us/fabric/data-warehouse/dimensional-modeling-load-tables) · [IDENTITY columns](https://learn.microsoft.com/en-us/fabric/data-warehouse/identity) · [T-SQL surface area (MERGE, constraints)](https://learn.microsoft.com/en-us/fabric/data-warehouse/tsql-surface-area) · [Copy job incremental and CDC](https://learn.microsoft.com/en-us/fabric/data-factory/what-is-copy-job) · [KQL arg\_max](https://learn.microsoft.com/en-us/kusto/query/arg-max-aggregation-function) · [Spark structured streaming watermarks](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
 
-## Part 5 — Batch transformation
+## Part 8 — Batch transformation
 
 Match the transformation tool to where the data lives and the builder's skills: Power Query for low-code shaping, Spark for large or complex lakehouse work, T-SQL inside a warehouse, KQL inside an eventhouse.
 
@@ -562,7 +562,7 @@ Fabric Warehouse and the SQL analytics endpoint support `ROLLUP`, `CUBE` and `GR
 
 Sources: [Decision guide: transform tools](https://learn.microsoft.com/en-us/fabric/fundamentals/decision-guide-pipeline-dataflow-spark) · [Choose a data store](https://learn.microsoft.com/en-us/fabric/fundamentals/decision-guide-data-store) · [GROUP BY in Fabric Warehouse](https://learn.microsoft.com/en-us/sql/t-sql/queries/select-group-by-transact-sql?view=fabric) · [GROUPING](https://learn.microsoft.com/en-us/sql/t-sql/functions/grouping-transact-sql?view=fabric) · [KQL summarize](https://learn.microsoft.com/en-us/kusto/query/summarize-operator) · [KQL lookup](https://learn.microsoft.com/en-us/kusto/query/lookup-operator)
 
-## Part 6 — Streaming and Real-Time Intelligence
+## Part 9 — Streaming and Real-Time Intelligence
 
 Eventstream is the no-code way to capture, transform and route events. Spark structured streaming is the code-first path into lakehouse Delta tables. KQL in an Eventhouse is where streaming data is stored and queried at speed.
 
@@ -1000,18 +1000,18 @@ Each row is a fact that a practice answer got wrong during study. Most are excep
 
 | Area | The fact | See |
 | --- | --- | --- |
-| Security | Column-level security blocks a column, and a query that touches it fails. Dynamic data masking lets the query succeed with masked values unless the user has UNMASK, and does not stop inference with a WHERE clause. | Part 8 |
-| Security | ReadAll is an item permission. DefaultReader is the OneLake security role that grants data access, and its members are everyone with ReadAll. Delete it and those users lose data access. | Part 8 |
-| Security | A ReadWrite role has no effect on Admin, Member or Contributor, and it cannot contain row or column rules. | Part 8 |
-| Security | OneLake security has only Grant roles. There are no Deny roles. | Part 8 |
-| Security | Roles combine as a union, except the SQL analytics endpoint, which intersects column allow lists. If any role hides a column, the endpoint blocks it. | Part 8 |
-| Security | Role definition changes take about 5 minutes. Group membership changes take about an hour, and some engines need an extra hour. | Part 8 |
-| Ingestion | Mirroring only goes from a supported source into OneLake. It never writes back to the source. | Part 3 |
-| Ingestion | Mirroring includes 1 TB of free storage per capacity unit (F64 = 64 TB). Replication compute is free and uses no capacity. | Part 3 |
-| Ingestion | Mirrored databases created in the portal default to 1 day of retention. Older ones default to 7 days. | Part 3 |
-| Ingestion | In a Copy job, watermark incremental copy captures only inserts and updates. CDC captures deletes too and supports SCD Type 2. | Part 3 |
-| Streaming | A hopping window with size 30 and hop 10 puts each event in three windows. If the hop is larger than the size, events in the gaps are never counted. | Part 6 |
-| Streaming | A session window closes after a quiet gap. Use it for bursts of activity per key. Tumbling windows cannot do this. | Part 6 |
+| Security | Column-level security blocks a column, and a query that touches it fails. Dynamic data masking lets the query succeed with masked values unless the user has UNMASK, and does not stop inference with a WHERE clause. | Part 3 |
+| Security | ReadAll is an item permission. DefaultReader is the OneLake security role that grants data access, and its members are everyone with ReadAll. Delete it and those users lose data access. | Part 3 |
+| Security | A ReadWrite role has no effect on Admin, Member or Contributor, and it cannot contain row or column rules. | Part 3 |
+| Security | OneLake security has only Grant roles. There are no Deny roles. | Part 3 |
+| Security | Roles combine as a union, except the SQL analytics endpoint, which intersects column allow lists. If any role hides a column, the endpoint blocks it. | Part 3 |
+| Security | Role definition changes take about 5 minutes. Group membership changes take about an hour, and some engines need an extra hour. | Part 3 |
+| Ingestion | Mirroring only goes from a supported source into OneLake. It never writes back to the source. | Part 6 |
+| Ingestion | Mirroring includes 1 TB of free storage per capacity unit (F64 = 64 TB). Replication compute is free and uses no capacity. | Part 6 |
+| Ingestion | Mirrored databases created in the portal default to 1 day of retention. Older ones default to 7 days. | Part 6 |
+| Ingestion | In a Copy job, watermark incremental copy captures only inserts and updates. CDC captures deletes too and supports SCD Type 2. | Part 6 |
+| Streaming | A hopping window with size 30 and hop 10 puts each event in three windows. If the hop is larger than the size, events in the gaps are never counted. | Part 9 |
+| Streaming | A session window closes after a quiet gap. Use it for bursts of activity per key. Tumbling windows cannot do this. | Part 9 |
 | Delta | VACUUM keeps 7 days by default. Portal and API requests under 7 days fail unless spark.databricks.delta.retentionDurationCheck.enabled is false. | Part 12 |
 | Delta | Lakehouse maintenance (OPTIMIZE, VACUUM) works only on Delta tables, not legacy Parquet, ORC, AVRO or CSV tables. | Part 12 |
 
@@ -1019,48 +1019,48 @@ Each row is a fact that a practice answer got wrong during study. Most are excep
 
 | Area | The fact | See |
 | --- | --- | --- |
-| Security | ReadData is not Read. In the item permissions table, ReadData sees no item metadata, sees SQL data only in Delegated mode, and sees no OneLake data. Read sees metadata but no SQL or OneLake data. | Part 8 |
-| Ingestion | A Dataflow Gen2 Warehouse destination needs a fixed schema, staging, and the same workspace as the dataflow. Automatic settings apply only to Lakehouse and Azure SQL and drop and recreate the table on every refresh. | Part 3 |
+| Security | ReadData is not Read. In the item permissions table, ReadData sees no item metadata, sees SQL data only in Delegated mode, and sees no OneLake data. Read sees metadata but no SQL or OneLake data. | Part 3 |
+| Ingestion | A Dataflow Gen2 Warehouse destination needs a fixed schema, staging, and the same workspace as the dataflow. Automatic settings apply only to Lakehouse and Azure SQL and drop and recreate the table on every refresh. | Part 6 |
 | Errors | A `DWCopyCommandOperationFailed` transport-level error is a dropped connection. Learn's fix is to check server logs and network stability and split the copy into partitions. | Part 11 |
 | Errors | Workspace staging times out after 60 minutes. Learn recommends external staging for long-running jobs. | Part 11 |
 | Errors | Eventstream: Data conversion errors are output events that can't be converted to the expected schema. Deserialization errors are input events the engine can't deserialize. Viewer is enough for Data insights and Runtime logs. Workspace monitoring needs Admin. | Part 11 |
 | Timeouts | Learn pages disagree. The Activity overview says default 12 hours and maximum 7 days. The Data Factory limitations page says 24 hours. | Parts 11, 12 |
-| Governance | A sensitivity label does not survive export to .csv or .txt. Mandatory labeling is not enforced for lakehouses, pipelines or warehouses: the user can save without a label unless the experience itself requires one. | Part 8 |
-| Governance | Downstream inheritance runs Power BI to Power BI, Fabric to Fabric and Fabric to Power BI. It does not run Power BI to Fabric. Items autogenerated from a lakehouse take the lakehouse's label, not one from further upstream. | Part 8 |
+| Governance | A sensitivity label does not survive export to .csv or .txt. Mandatory labeling is not enforced for lakehouses, pipelines or warehouses: the user can save without a label unless the experience itself requires one. | Part 3 |
+| Governance | Downstream inheritance runs Power BI to Power BI, Fabric to Fabric and Fabric to Power BI. It does not run Power BI to Fabric. Items autogenerated from a lakehouse take the lakehouse's label, not one from further upstream. | Part 3 |
 | Errors | HTTP 430 (capacity exceeded) and HTTP 429 (API rate limit) are different errors. 430: Autoscale Billing for Fabric Spark, job monitoring, Capacity Metrics app, staggering jobs. 429: exponential backoff with jitter and Retry-After. | Part 11 |
-| Security | A Spark notebook error that names ReadAll needs the ReadAll item permission (Spark). ReadData is the SQL permission. Someone needing both needs both. | Parts 8, 11 |
+| Security | A Spark notebook error that names ReadAll needs the ReadAll item permission (Spark). ReadData is the SQL permission. Someone needing both needs both. | Parts 3, 11 |
 | Alerts | Free schedule failure emails fire for scheduled runs only, and recipients must be Entra users, groups or B2B guests (no direct external addresses). Activator alert rules are paid and need workspace monitoring. Configuring failure emails needs Contributor or Write on the item. | Part 10 |
-| Ingestion | Copy job watermark incremental copy captures inserts and updates, and a datetime column is a supported watermark. Default update method is append, which keeps history and duplicates updated rows. Merge uses the primary key. CDC needs CDC enabled on the source and is Preview. A failed run doesn't change the Copy job's state: the next run resumes from the last successful run. | Part 3 |
-| Security | Creating a shortcut needs Write on the item where it is created plus Read on the target; Admin, Member and Contributor also need target Read. T-SQL in Delegated identity mode reads a same-tenant OneLake shortcut as the item owner; User's identity mode uses the caller. | Part 8 |
-| Ingestion | Dataflow Gen2 incremental refresh replaces changed buckets inside a fixed look-back window. It needs the replace update method and a fixed schema, and OPTIMIZE isn't supported on that lakehouse table. Limits are 50 buckets per query and 150 per dataflow. A forward-moving watermark is the Copy job model. | Part 3 |
-| Streaming | An eventstream SQL operator windows on arrival time unless the query says TIMESTAMP BY a field. A requirement to use the device's own timestamp means TIMESTAMP BY. A SQL operator also needs new destination nodes. | Part 6 |
-| Streaming | Eventstream no-code operators: Union combines streams that share fields, Expand makes one row per array element, Join pairs two streams on a condition, Manage fields only adds, removes, renames or retypes fields. | Part 6 |
-| Ingestion | Dataflow Gen2 never recreates an existing table it didn't create if you delete it. KQL database and Azure Data Explorer destinations don't support replace. Automatic settings cover Lakehouse, Azure SQL Database and Snowflake, not Warehouse. | Part 3 |
+| Ingestion | Copy job watermark incremental copy captures inserts and updates, and a datetime column is a supported watermark. Default update method is append, which keeps history and duplicates updated rows. Merge uses the primary key. CDC needs CDC enabled on the source and is Preview. A failed run doesn't change the Copy job's state: the next run resumes from the last successful run. | Part 6 |
+| Security | Creating a shortcut needs Write on the item where it is created plus Read on the target; Admin, Member and Contributor also need target Read. T-SQL in Delegated identity mode reads a same-tenant OneLake shortcut as the item owner; User's identity mode uses the caller. | Part 3 |
+| Ingestion | Dataflow Gen2 incremental refresh replaces changed buckets inside a fixed look-back window. It needs the replace update method and a fixed schema, and OPTIMIZE isn't supported on that lakehouse table. Limits are 50 buckets per query and 150 per dataflow. A forward-moving watermark is the Copy job model. | Part 6 |
+| Streaming | An eventstream SQL operator windows on arrival time unless the query says TIMESTAMP BY a field. A requirement to use the device's own timestamp means TIMESTAMP BY. A SQL operator also needs new destination nodes. | Part 9 |
+| Streaming | Eventstream no-code operators: Union combines streams that share fields, Expand makes one row per array element, Join pairs two streams on a condition, Manage fields only adds, removes, renames or retypes fields. | Part 9 |
+| Ingestion | Dataflow Gen2 never recreates an existing table it didn't create if you delete it. KQL database and Azure Data Explorer destinations don't support replace. Automatic settings cover Lakehouse, Azure SQL Database and Snowflake, not Warehouse. | Part 6 |
 | Optimize | Autotune tunes only three Spark settings, runs only on Runtime 1.2, and not in high concurrency mode. Warehouse V-Order can't be re-enabled once disabled. An eventstream's throughput level can't beat an Event Hubs source with fewer than four partitions. | Part 12 |
 | Errors | Warehouse error 24556 or 24706: write conflicts are detected at table level even when the rows differ. Fix by not running UPDATE, DELETE or MERGE concurrently on one table, or retry with backoff. Distributed transactions aren't supported and isolation-level changes are ignored. | Part 11 |
 | Alerts | Missed twice: free schedule failure emails cover failures only. An alert on Succeeded or Started needs an Activator rule, which needs workspace monitoring. | Part 10 |
-| Governance | Missed twice: a label never flows from a Power BI item to a Fabric item. Memory aid: labels follow the data downstream, and a lakehouse sits upstream of a semantic model. An autogenerated SQL analytics endpoint takes its parent lakehouse's label. A .csv or .txt export carries no protection. Mandatory labeling isn't enforced for lakehouses, pipelines or warehouses. | Part 8 |
-| Security | The default() mask shows a number as 0, a string as XXXX and a date as 1900-01-01. A range filter in WHERE still returns the matching rows, so the real value can be inferred; combine masking with column-level and row-level security. | Part 8 |
-| Security | Connecting a workspace to a Git repository is Admin only. A Viewer can read lakehouse and warehouse data with T-SQL (ReadData) but not through Spark or OneLake APIs (ReadAll). | Part 8 |
-| Workspace settings | Two similar names. Customize compute configurations for items (workspace Admin, Pool tab) lets an environment set driver and executor size per item. Customized workspace pools (capacity admin, on by default) allows custom pools at all. A domain contributor assigns their own workspaces from workspace settings and has no Domains tab; a domain admin works in the admin portal. | Part 2 |
-| Security | Column-level security doesn't hide a column, it denies it. SELECT \* fails with Msg 230 (SELECT permission denied on the column); the user must name only the granted columns. Masking is the feature that returns rows with altered values. | Part 8 |
-| Security | With OneLake security on, ReadAll gives data access only through the DefaultReader role. Delete DefaultReader and ReadAll users lose access until added to another role. Admin, Member and Contributor keep access through their Write permission. Across roles, row filters combine with OR; column rules combine as a union except at the SQL analytics endpoint, where any role that hides a column blocks it. | Part 8 |
-| Lifecycle | Deployment rules by item: a notebook supports only a default lakehouse rule. Data source and parameter rules are for semantic models and Dataflow Gen1. Rules are created in the target stage by the item owner, never in the development stage, and apply from the next deployment. | Part 9 |
-| Governance | Endorsement: anyone with write permission can promote. Only admin-specified users can certify or mark master data. Master data applies only to items that contain data, such as lakehouses and semantic models. Dashboards can't be promoted or certified. | Part 8 |
-| Mock 1: ingestion | An Azure SQL database can't be mirrored while CDC is enabled on it, and only a writable primary can be mirrored. Mirroring types: database mirroring copies the data, metadata mirroring leaves it in the source (Snowflake, Databricks), open mirroring means writing your own application. COPY INTO file types are CSV, JSONL and PARQUET only. In a lakehouse, shortcuts go at the top level of Tables, or at any level of Files. | Part 3 |
-| Mock 1: missed again | Three facts missed a second time. Dataflow Gen2 incremental refresh needs replace AND a fixed schema. A KQL update policy with a 0s soft-delete on the source must be transactional. Deleting DefaultReader removes access for ReadAll users, while Admin, Member and Contributor keep it. | Parts 3, 6, 8 |
+| Governance | Missed twice: a label never flows from a Power BI item to a Fabric item. Memory aid: labels follow the data downstream, and a lakehouse sits upstream of a semantic model. An autogenerated SQL analytics endpoint takes its parent lakehouse's label. A .csv or .txt export carries no protection. Mandatory labeling isn't enforced for lakehouses, pipelines or warehouses. | Part 3 |
+| Security | The default() mask shows a number as 0, a string as XXXX and a date as 1900-01-01. A range filter in WHERE still returns the matching rows, so the real value can be inferred; combine masking with column-level and row-level security. | Part 3 |
+| Security | Connecting a workspace to a Git repository is Admin only. A Viewer can read lakehouse and warehouse data with T-SQL (ReadData) but not through Spark or OneLake APIs (ReadAll). | Part 3 |
+| Workspace settings | Two similar names. Customize compute configurations for items (workspace Admin, Pool tab) lets an environment set driver and executor size per item. Customized workspace pools (capacity admin, on by default) allows custom pools at all. A domain contributor assigns their own workspaces from workspace settings and has no Domains tab; a domain admin works in the admin portal. | Part 1 |
+| Security | Column-level security doesn't hide a column, it denies it. SELECT \* fails with Msg 230 (SELECT permission denied on the column); the user must name only the granted columns. Masking is the feature that returns rows with altered values. | Part 3 |
+| Security | With OneLake security on, ReadAll gives data access only through the DefaultReader role. Delete DefaultReader and ReadAll users lose access until added to another role. Admin, Member and Contributor keep access through their Write permission. Across roles, row filters combine with OR; column rules combine as a union except at the SQL analytics endpoint, where any role that hides a column blocks it. | Part 3 |
+| Lifecycle | Deployment rules by item: a notebook supports only a default lakehouse rule. Data source and parameter rules are for semantic models and Dataflow Gen1. Rules are created in the target stage by the item owner, never in the development stage, and apply from the next deployment. | Part 4 |
+| Governance | Endorsement: anyone with write permission can promote. Only admin-specified users can certify or mark master data. Master data applies only to items that contain data, such as lakehouses and semantic models. Dashboards can't be promoted or certified. | Part 3 |
+| Mock 1: ingestion | An Azure SQL database can't be mirrored while CDC is enabled on it, and only a writable primary can be mirrored. Mirroring types: database mirroring copies the data, metadata mirroring leaves it in the source (Snowflake, Databricks), open mirroring means writing your own application. COPY INTO file types are CSV, JSONL and PARQUET only. In a lakehouse, shortcuts go at the top level of Tables, or at any level of Files. | Part 6 |
+| Mock 1: missed again | Three facts missed a second time. Dataflow Gen2 incremental refresh needs replace AND a fixed schema. A KQL update policy with a 0s soft-delete on the source must be transactional. Deleting DefaultReader removes access for ReadAll users, while Admin, Member and Contributor keep it. | Parts 6, 9, 3 |
 | Mock 1: monitor and optimize | Throttling by future capacity used: up to 10 minutes nothing, 10 to 60 minutes a 20-second delay on interactive requests, 60 minutes to 24 hours interactive rejected, over 24 hours everything rejected. HTTP 429 is an API rate limit (back off and retry); HTTP 430 is Spark capacity (Autoscale Billing). The native execution engine falls back for JSON, XML and structured streaming. A default domain never overrides a workspace's existing domain. | Parts 11, 12 |
-| Mock 2: security | Trusted workspace access lets supported items such as pipelines reach a firewall-protected ADLS Gen2 account through the workspace identity. It needs an F SKU capacity and a resource instance rule created with an ARM template or PowerShell, and it doesn't cover Spark. Notebooks need a managed private endpoint, created by a workspace admin. | Part 8 |
-| Mock 2: ingestion | Dataflow Gen2 incremental refresh has two bucket limits: 50 per query and 150 per dataflow. Check the per-query limit first: one query with 60 buckets fails even though the dataflow total is under 150. Replace with a dynamic schema drops and recreates the destination table when the schema changes, which can lose relationships and measures; a fixed schema fails the publish instead. | Part 3 |
-| Mock 3: streaming | When an eventstream with a database CDC source is published, ingestion can start before routing, so part of the initial snapshot never reaches the destination. Clear **Activate ingestion** on the Lakehouse or Eventhouse destination before publishing, then activate it manually with **Custom time** set before the snapshot started. | Part 6 |
-| Mock 3: streaming | Event throughput levels: Low under 10 MB/s, Medium 10 to 100 MB/s, High over 100 MB/s. To change the level, deactivate every node that supports pause and resume, change it, then reactivate them. A custom endpoint source and an Eventhouse destination in Direct ingestion mode can't be deactivated and don't block the change. | Part 6 |
-| Mock 3: KQL | A materialized view created with `backfill=true` also covers rows already in the source table, and the command must be `.create async materialized-view`. Without backfill, the view covers only records ingested after it was created. To deduplicate continuously, use a materialized view with `take_any` or `arg_max` rather than deduplicating in every query. | Part 6 |
-| Mock 3: orchestration | Inside longer text, a pipeline expression must be wrapped in `@{...}`; a bare `@` in the middle of a string isn't evaluated. A Lookup with First row only returns `output.firstRow.<column>`; without it, rows come back in `output.value`. `@@` escapes a literal `@`. | Part 7 |
-| Mock 3: governance | A domain admin can't rename or delete the domain, or add or remove other domain admins. A domain admin can override the delegated certification setting and name the domain's own certifiers. | Part 2 |
-| Mock 3: warehouse | IDENTITY columns in a Fabric Warehouse are `bigint` only. Values are unique but not sequential, and gaps can occur. You can't add an IDENTITY column with ALTER TABLE; rebuild the table with CTAS or SELECT...INTO. | Part 4 |
-| Mock 3: transformation | `GROUP BY ROLLUP (Region, Territory)` returns each (Region, Territory) pair, a subtotal per Region and a grand total. `CUBE` also adds a total per Territory across regions. `GROUPING SETS` returns only the sets listed. | Part 5 |
+| Mock 2: security | Trusted workspace access lets supported items such as pipelines reach a firewall-protected ADLS Gen2 account through the workspace identity. It needs an F SKU capacity and a resource instance rule created with an ARM template or PowerShell, and it doesn't cover Spark. Notebooks need a managed private endpoint, created by a workspace admin. | Part 3 |
+| Mock 2: ingestion | Dataflow Gen2 incremental refresh has two bucket limits: 50 per query and 150 per dataflow. Check the per-query limit first: one query with 60 buckets fails even though the dataflow total is under 150. Replace with a dynamic schema drops and recreates the destination table when the schema changes, which can lose relationships and measures; a fixed schema fails the publish instead. | Part 6 |
+| Mock 3: streaming | When an eventstream with a database CDC source is published, ingestion can start before routing, so part of the initial snapshot never reaches the destination. Clear **Activate ingestion** on the Lakehouse or Eventhouse destination before publishing, then activate it manually with **Custom time** set before the snapshot started. | Part 9 |
+| Mock 3: streaming | Event throughput levels: Low under 10 MB/s, Medium 10 to 100 MB/s, High over 100 MB/s. To change the level, deactivate every node that supports pause and resume, change it, then reactivate them. A custom endpoint source and an Eventhouse destination in Direct ingestion mode can't be deactivated and don't block the change. | Part 9 |
+| Mock 3: KQL | A materialized view created with `backfill=true` also covers rows already in the source table, and the command must be `.create async materialized-view`. Without backfill, the view covers only records ingested after it was created. To deduplicate continuously, use a materialized view with `take_any` or `arg_max` rather than deduplicating in every query. | Part 9 |
+| Mock 3: orchestration | Inside longer text, a pipeline expression must be wrapped in `@{...}`; a bare `@` in the middle of a string isn't evaluated. A Lookup with First row only returns `output.firstRow.<column>`; without it, rows come back in `output.value`. `@@` escapes a literal `@`. | Part 2 |
+| Mock 3: governance | A domain admin can't rename or delete the domain, or add or remove other domain admins. A domain admin can override the delegated certification setting and name the domain's own certifiers. | Part 1 |
+| Mock 3: warehouse | IDENTITY columns in a Fabric Warehouse are `bigint` only. Values are unique but not sequential, and gaps can occur. You can't add an IDENTITY column with ALTER TABLE; rebuild the table with CTAS or SELECT...INTO. | Part 7 |
+| Mock 3: transformation | `GROUP BY ROLLUP (Region, Territory)` returns each (Region, Territory) pair, a subtotal per Region and a grand total. `CUBE` also adds a total per Territory across regions. `GROUPING SETS` returns only the sets listed. | Part 8 |
 | Mock 3: monitoring | OneLake diagnostics (Workspace settings, OneLake tab) writes JSON events about OneLake access, including API calls and access through shortcuts from other workspaces, to a lakehouse in the same capacity. A workspace admin with Contributor on that lakehouse can turn it on, and the events can be made immutable. Purview audit logs need the Audit Logs role instead. | Part 10 |
-| Mock 3: missed again | Facts missed a second time: CDC must be disabled before an Azure SQL database can be mirrored; a default domain never overrides an existing domain assignment; sensitivity labels flow only downstream and never from a Power BI item to a Fabric item; autotune runs only on Runtime 1.2 and not in high concurrency mode. | Parts 2, 3, 8, 12 |
+| Mock 3: missed again | Facts missed a second time: CDC must be disabled before an Azure SQL database can be mirrored; a default domain never overrides an existing domain assignment; sensitivity labels flow only downstream and never from a Power BI item to a Fabric item; autotune runs only on Runtime 1.2 and not in high concurrency mode. | Parts 1, 6, 3, 12 |
 
 **Numbers to memorize**
 
@@ -1371,19 +1371,19 @@ Sources: [Stateful structured streaming](https://learn.microsoft.com/en-us/fabri
 
 These are Microsoft's official Fabric labs and Learn tutorials, mapped to the parts above. Labs marked **DP-700** are in Microsoft's DP-700 lab list (15 labs, about 9 hours in total). All need a Fabric trial or capacity, and a few steps need tenant admin rights.
 
-**Part 1 — Foundations**
+**Part 5 — Foundations**
 
 - [ ] [Create a Microsoft Fabric Lakehouse](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html) · 30 min · DP-700
 - [ ] [Discover and connect to data in OneLake](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/25-discover-onelake.html) · 30 min · shortcuts across workspaces, SQL analytics endpoint
 - [ ] [Analyze data in a data warehouse](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html) · 30 min · DP-700
 
-**Part 2 — Workspace settings** (no official lab; do these in your own workspace)
+**Part 1 — Workspace settings** (no official lab; do these in your own workspace)
 
 - [ ] Open Workspace settings → Data Engineering/Science → Spark compute; create a custom pool, then turn on high concurrency for notebooks and pipelines ([settings guide](https://learn.microsoft.com/en-us/fabric/data-engineering/workspace-admin-settings))
 - [ ] Workspace settings → OneLake tab: turn on shortcut caching and set the retention days
 - [ ] [Create an Apache Airflow job](https://learn.microsoft.com/en-us/fabric/data-factory/create-apache-airflow-jobs), then compare starter and custom pools in Data Factory settings
 
-**Part 3 — Batch ingestion**
+**Part 6 — Batch ingestion**
 
 - [ ] [Ingest data with a pipeline](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html) · 45 min · DP-700
 - [ ] [Create and use Dataflows (Gen2)](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html) · 30 min · DP-700
@@ -1391,12 +1391,12 @@ These are Microsoft's official Fabric labs and Learn tutorials, mapped to the pa
 - [ ] [Create a Copy job](https://learn.microsoft.com/en-us/fabric/data-factory/create-copy-job) · try incremental copy
 - [ ] [Mirroring tutorial: Azure SQL Database](https://learn.microsoft.com/en-us/fabric/mirroring/azure-sql-database-tutorial) · needs an Azure SQL database
 
-**Part 4 — Loading patterns**
+**Part 7 — Loading patterns**
 
 - [ ] [Design and implement a dimensional model](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/26-design-dimensional-models.html) · 30 min · star schema plus SCD Type 1 and Type 2
 - [ ] [Create a medallion architecture in a lakehouse](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html) · 45 min · DP-700
 
-**Part 5 — Batch transformation**
+**Part 8 — Batch transformation**
 
 - [ ] [Analyze data with Apache Spark](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/02-analyze-spark.html) · 45 min · DP-700
 - [ ] [Use delta tables in Apache Spark](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03-delta-lake.html) · 45 min · DP-700
@@ -1405,26 +1405,26 @@ These are Microsoft's official Fabric labs and Learn tutorials, mapped to the pa
 - [ ] [Transform data in a warehouse using T-SQL](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/26d-transform-data-tsql.html) · 45 min
 - [ ] [Query a data warehouse](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06b-data-warehouse-query.html) · 30 min · DP-700
 
-**Part 6 — Streaming**
+**Part 9 — Streaming**
 
 - [ ] [Get started with Real-Time Intelligence](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/07-real-time-Intelligence.html) · 30 min · DP-700
 - [ ] [Ingest real-time data with Eventstream](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html) · 30 min · DP-700 · aggregations into an eventhouse
 - [ ] [Work with data in an eventhouse](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/12-query-data-in-kql-database.html) · 25 min · KQL and T-SQL over a KQL database
 - [ ] In the Eventstream lab, add a **Group by** with a tumbling window, then change it to hopping and compare the output
 
-**Part 7 — Orchestration** (extend the Part 3 pipeline)
+**Part 2 — Orchestration** (extend the Part 6 pipeline)
 
 - [ ] Add a Lookup → ForEach → parameterized Copy pattern, then a Notebook activity that returns `notebookutils.notebook.exit()` and an If Condition that reads `output.result.exitValue`
 - [ ] Add a schedule and a OneLake file event trigger ([steps](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs))
 
-**Part 8 — Security and governance**
+**Part 3 — Security and governance**
 
 - [ ] [Secure data in a data warehouse](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06d-secure-data-warehouse.html) · 45 min · DP-700 · DDM, RLS, CLS, GRANT/DENY/REVOKE
 - [ ] [Secure data access in Microsoft Fabric](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html) · 45 min · DP-700 · workspace roles, item permissions, OneLake security roles
 - [ ] [Govern analytics data](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19b-govern-analytics-data.html) · 30 min · endorsement and lineage
 - [ ] [Implement row-level security in a warehouse (tutorial)](https://learn.microsoft.com/en-us/fabric/data-warehouse/tutorial-row-level-security)
 
-**Part 9 — Lifecycle management**
+**Part 4 — Lifecycle management**
 
 - [ ] [Implement deployment pipelines](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html) · 20 min · DP-700
 - [ ] [Get started with Git integration](https://learn.microsoft.com/en-us/fabric/cicd/git-integration/git-get-started) · connect a workspace to a free GitHub repo, commit, then update
