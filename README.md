@@ -33,12 +33,12 @@ I built these with **Claude (Anthropic) as my study coach**. The rules were stri
 
 ## Please read
 
-- **No real exam content.** All questions were written from public documentation before I sat the exam, and every scenario is fictional. This folder will never include recalled exam questions; the [Microsoft exam agreement](https://learn.microsoft.com/en-us/certifications/microsoft-exam-agreement) prohibits sharing them, and please don't post any in issues.
+- **No real exam content.** All questions were written from public documentation before I sat the exam, and every scenario is fictional. This repo will never include recalled exam questions; the [Microsoft exam agreement](https://learn.microsoft.com/en-us/certifications/microsoft-exam-agreement) prohibits sharing them, and please don't post any in issues.
 - **Not affiliated with Microsoft.** This is a personal study resource, not official material.
 - **Fabric changes fast.** Facts were checked between Oct 11 and Nov 16, 2026. If a detail matters, open the linked Learn page. Corrections are welcome as issues or pull requests; please include the Learn link.
 
 ## License and attribution
 
-My content in this folder is © 2026 Ankur Jain, licensed under [CC BY 4.0](LICENSE). The license covers this folder only. You can share and adapt it as long as you give credit.
+My content in this repo is © 2026 Ankur Jain, licensed under [CC BY 4.0](LICENSE). You can share and adapt it as long as you give credit.
 
 The materials quote and summarize [Microsoft Learn](https://learn.microsoft.com/) documentation, which Microsoft publishes under CC BY 4.0 (see the [fabric-docs repository](https://github.com/MicrosoftDocs/fabric-docs)). Sources are linked throughout. Microsoft, Microsoft Fabric and related names are trademarks of Microsoft Corporation.

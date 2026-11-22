@@ -53,6 +53,6 @@ After mock 3, I reviewed only the misses and went to bed. On exam morning I spen
 
 ## The materials
 
-Everything I studied from is in this folder: the [Reading Pack](reading-pack.md), the [question bank](question-bank.md) and [three full mocks with answer keys](mocks/). None of it comes from the real exam. It was all written from public documentation before I sat the exam.
+Everything I studied from is in this repo: the [Reading Pack](reading-pack.md), the [question bank](question-bank.md) and [three full mocks with answer keys](mocks/). None of it comes from the real exam. It was all written from public documentation before I sat the exam.
 
 Good luck. If this helps you pass, I'd love to hear about it.
