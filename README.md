@@ -11,7 +11,6 @@ I'm Ankur Jain, a senior data engineer. I failed DP-700 the first time with 619 
 | [reading-pack.md](reading-pack.md) | A 14-part study guide that covers every skill in the DP-700 outline, grouped by exam domain. It includes tables, code patterns, hands-on labs and a list of common traps (Part 14). Every part links its Microsoft Learn sources. |
 | [question-bank.md](question-bank.md) | 66 scenario questions with hidden answers and a one-line reason for each. |
 | [mocks/](mocks/) | Three full 45-question mock exams, each with a separate answer key. Mock 3 uses choose-two and Yes/No formats with all-or-nothing scoring. |
-| [journey.md](journey.md) | How I went from 619 to 745: the plan, the scores along the way, and what I'd do again. |
 
 ## How to use it
 
