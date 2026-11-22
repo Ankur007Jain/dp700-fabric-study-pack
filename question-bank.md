@@ -1,7 +1,5 @@
 # DP-700 Question Bank
 
-By **Ankur Jain**, built with Claude (Anthropic) as study coach, November 2026.
-
 66 practice questions written while preparing for DP-700 (Microsoft Fabric Data Engineer Associate). All scenarios are fictional and none come from the real exam. Every fact was checked against Microsoft Learn on the day the question was written; deeper explanations and source links are in the [Reading Pack](reading-pack.md). Answers are hidden: click **Show answer** under each question. The three full 45-question mocks are in the [mocks](mocks/) folder.
 
 Each question header names the exam domain and skill: Domain 1 = Implement and manage an analytics solution, Domain 2 = Ingest and transform data, Domain 3 = Monitor and optimize an analytics solution.
