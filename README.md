@@ -34,3 +34,4 @@ I built these with **Claude (Anthropic) as my study coach**. The rules were stri
 - **Not affiliated with Microsoft.** This is a personal study resource, not official material.
 - **Fabric changes fast.** Facts were checked between Oct 11 and Nov 16, 2026. If a detail matters, open the linked Learn page. Corrections are welcome as issues or pull requests; please include the Learn link.
 
+- **Sources.** These materials summarize and quote [Microsoft Learn](https://learn.microsoft.com/) documentation (CC BY 4.0); sources are linked throughout.
